@@ -17,15 +17,16 @@ title: 개발 블로그
 description: > # this means to ignore newlines until "baseurl:"
   Material theme based on <a href="http://materializecss.com">Materialize.css</a> for jekyll sites
 baseurl: ""
-url: "https://dwstudylog.github.io"
+url: "https://dowon0809.github.io"
 permalink: /:year/:month/:day/:title
-repository: dwstudylog/dwstudylog.github.io
+repository: dowon0809/dowon0809.github.io
 paginate: 5
 
 # MatJek specific configurations
-github_profile: "https://github.com/dwstudylog"
+github_profile: "https://github.com/dowon0809"
 user: "이도원(Dowon Lee)"
 user_email: "dierwdod@gmail.com"
+user_phone: "010-3669-7343"
 contact_url: ""
 
 # Build settings

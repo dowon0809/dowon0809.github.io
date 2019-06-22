@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
       
-      Jekyll를 이용한 Github 블로그 생성
+      Github 블로그 만들기
       
     </title>
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="/assets/res/favicon.ico"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/res/favicon.ico">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
     <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="/assets/css/main.css">
@@ -23,17 +23,17 @@
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml"> -->
     <!-- Begin Jekyll SEO tag v2.5.0 -->
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Jekyll를 이용한 Github 블로그 생성" />
+<meta property="og:title" content="Github 블로그 만들기" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Material theme based on Materialize.css for jekyll sites" />
-<meta property="og:description" content="Material theme based on Materialize.css for jekyll sites" />
+<meta name="description" content="Jekyll과 Github Pages를 이용한 Github 블로그 생성 방법" />
+<meta property="og:description" content="Jekyll과 Github Pages를 이용한 Github 블로그 생성 방법" />
 <link rel="canonical" href="http://localhost:4000/2019/06/19/github-blog-post" />
 <meta property="og:url" content="http://localhost:4000/2019/06/19/github-blog-post" />
 <meta property="og:site_name" content="개발 블로그" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-06-19T04:30:13+09:00" />
 <script type="application/ld+json">
-{"description":"Material theme based on Materialize.css for jekyll sites","@type":"BlogPosting","url":"http://localhost:4000/2019/06/19/github-blog-post","headline":"Jekyll를 이용한 Github 블로그 생성","dateModified":"2019-06-19T04:30:13+09:00","datePublished":"2019-06-19T04:30:13+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/06/19/github-blog-post"},"@context":"http://schema.org"}</script>
+{"description":"Jekyll과 Github Pages를 이용한 Github 블로그 생성 방법","@type":"BlogPosting","url":"http://localhost:4000/2019/06/19/github-blog-post","headline":"Github 블로그 만들기","dateModified":"2019-06-19T04:30:13+09:00","datePublished":"2019-06-19T04:30:13+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/06/19/github-blog-post"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -42,8 +42,7 @@
       <nav class="top-nav teal">
         <div class="nav-wrapper">
           <div class="container">
-            <!-- <a class="page-title" style="color:#000000;" href="/"> -->
-              <span class="page-title">Jekyll를 이용한 Github 블로그 생성</span><!-- </a> -->
+            <!-- <a class="page-title" href="/"> --><span class="page-title">Github 블로그 만들기</span><!-- </a> -->
           </div>
         </div>
       </nav>
@@ -56,26 +55,25 @@
         <li>
           <div class="userView" style="text-align:center;">
             <div class="background"></div>
-            <a href="https://github.com/dwstudylog" target="_blank"><img class="circle z-depth-2" style="width:150px; height:130px; margin-left:auto; margin-right:auto;" src="/assets/res/user.png"></a>
+           <!--  <a href="https://github.com/dwstudylog" target="_blank"><img class="circle z-depth-2" src="/assets/res/user.png"></a> -->
+            <a href="/"><img class="circle z-depth-2" style="width:150px; height:110px; margin-left:auto; margin-right:auto;" src="/assets/res/user.png"></a>
             <span class="name">이도원(Dowon Lee)</span>
             <span class="email">dierwdod@gmail.com</span>
+            <span class="email">010-3669-7343</span>
           </div>
         </li>
         <li><div class="divider"></div></li>
         <li><a class="waves-effect" href="/"><i class="material-icons">person</i>Introduction</a></li>
         <li><a class="waves-effect" href="/learnings"><i class="material-icons">sort</i>Learning</a></li>
         <li><a class="waves-effect" href="/projects"><i class="material-icons">share</i>Projects</a></li>
-        <li><a class="waves-effect" href="/categories"><i class="material-icons">description</i>Categories</a></li>
-        <!-- <li><a class="waves-effect" href="/tags"><i class="material-icons">label</i>Tags</a></li> -->
-        <!-- <li><a class="waves-effect" href="/feed.xml" target="_blank"><i class="material-icons">rss_feed</i>RSS</a></li> -->
-    
+        <!-- <li><a class="waves-effect" href="/categories"><i class="material-icons">description</i>Categories</a></li>   -->  
       </ul>
     </header>
     <main>
 
 <div class="container">
   <div id="post-info">
-  <h3>Jekyll를 이용한 Github 블로그 생성</h3>
+  <h3>Github 블로그 만들기</h3>
   <ul class="collapsible hoverable" data-collapsible="accordion">
     <li>
       <div class="collapsible-header">
@@ -109,16 +107,81 @@
 <div class="divider"></div>
 <div class="row">
   <div class="col s12">
-    
+    <p><span style="font-weight:bold; font-size:1.2rem;">Jekyll</span>과 <span style="font-weight:bold; font-size:1.2rem;">Github Pages</span>를 이용한 Github 블로그 생성 방법</p>
+
+<p><br /></p>
+
+<h4 id="jekyll란"><strong>Jekyll란?</strong></h4>
+<p>Jekyll은 심플하고 블로그 지향적인 정적 웹 사이트 생성기이다. Jekyll은 Markdown, html 등의 파일을 템플릿 디렉토리로부터 읽어서 웹 서버에 바로 게시하여 정적 웹사이트를 만들 수 있다. 또한, Jekyll은 GitHub Pages의 내부 엔진이며 자신의 프로젝트 페이지나 블로그, 웹 사이트를 무료로 GitHub에 호스팅 할 수 있다.</p>
+<ul>
+  <li><strong><a href="http://jekyllthemes.org" style="color:#222222; text-decoration: underline;">Jekyll 무료 테마 다운로드</a></strong></li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="github-pages란"><strong>Github Pages란?</strong></h4>
+<p>Github Pages 는 Github 저장소의 내용을 웹페이지로 만들어 주는 서비스이며, Github 저장소의 내용을 직접 웹 페이지를 통해서 보여줄 수 있다. 즉, 무료로 웹 서버를 구축하여 자신의 블로그를 운영할 수 있다.</p>
+<ul>
+  <li><strong>1개의 Github 계정으로 1개의 정적 웹 서버만 이용 가능</strong></li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="github-블로그-만들기"><strong>Github 블로그 만들기</strong></h4>
+<h5 id="github-저장소-만들기">Github 저장소 만들기</h5>
+<p style="font-size:1.1rem;">Github에 블로그용 저장소 만들기 <span style="color:blue; font-weight:bold;">("원하는 이름.github.io"와 같이 입력)</span></p>
+<p><img src="http://localhost:4000/assets/img/1_git_repo_make.png" style="width:100%;" /></p>
+
+<p><br /></p>
+
+<h5 id="jekyll-설치-및-테스트">Jekyll 설치 및 테스트</h5>
+<p><span style="font-size: 1.3rem; font-weight: bold;">Jekyll 설치</span></p>
+<p style="font-size: 1.1rem;">Jekyll은 하나의 Ruby 패키지이며 Jekyll을 설치하기 위해서 Ruby를 먼저 설치해야 한다. MacOS는 기본적으로 Ruby가 설치되어 있으며 아래의 명령어를 입력하여 Jekyll을 설치한다.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"> <span class="err">$</span> <span class="n">sudo</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span> <span class="n">bundler</span></code></pre></figure>
+
+<p><br />
+<span style="font-size: 1.3rem; font-weight: bold;">Jekyll 테마 설정</span><br /></p>
+<p style="font-size: 1.1rem;"><a href="http://jekyllthemes.org" style="color:#222222; text-decoration: underline;">Jekyll 테마 사이트</a>에서 원하는 테마를 다운로드 한 뒤 "_config.yml" 파일에서 아래 항목의 값을 수정한다.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">*</span> <span class="ss">title: </span><span class="s2">"제목"</span>
+<span class="o">*</span> <span class="ss">baseurl: </span><span class="s2">""</span>
+<span class="o">*</span> <span class="ss">url: </span><span class="s2">"Github 블로그 도메인"</span> <span class="n">ex</span><span class="p">)</span> <span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">dowon</span><span class="p">.</span><span class="nf">github</span><span class="p">.</span><span class="nf">io</span>
+<span class="o">*</span> <span class="ss">repository: </span><span class="s2">"저장소 경로"</span> <span class="n">ex</span><span class="p">)</span> <span class="n">dowon0809</span><span class="o">/</span><span class="n">dowon</span><span class="p">.</span><span class="nf">github</span><span class="p">.</span><span class="nf">io</span>
+<span class="o">*</span> <span class="ss">user: </span><span class="s2">"사용자 이름"</span>
+<span class="o">*</span> <span class="ss">user_email: </span><span class="s2">"사용자 이메일"</span></code></pre></figure>
+
+<p><span style="color:red; font-weight: bold;">테마에 따라 설정해야 하는 값이 다를 수 있으며 위의 항목은 공통적인 부분을 추려낸 항목입니다.</span><br />
+<br />
+<span style="font-size: 1.3rem; font-weight: bold;">Jekyll 로컬 테스트</span></p>
+<p style="font-size:1.1rem;">Jekyll 로컬 서버 구동을 위해 다운로드한 테마의 경로로 이동한 뒤 아래의 명령어를 순서대로 실행하여 bundle을 설치하고 Jekyll 로컬 서버를 구동한다.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"> <span class="err">$</span> <span class="n">bundle</span> <span class="n">install</span>
+ <span class="err">$</span> <span class="n">bundle</span> <span class="nb">exec</span> <span class="n">jekyll</span> <span class="n">serve</span></code></pre></figure>
+
+<p><br /></p>
+
+<h5 id="github-pages에-배포하기">Github Pages에 배포하기</h5>
+<p><span style="font-size:1.3rem; font-weight:bold;">Github 블로그 저장소 가져오기</span></p>
+<p style="font-size:1.1rem;">Github 원격 저장소를 저장하고 싶은 경로로 이동한 뒤 아래의 명령어를 통해 원격 저장소를 PC로 가져온다.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"> <span class="err">$</span> <span class="n">git</span> <span class="nb">clone</span> <span class="s2">"Github 저장소 웹 URL"</span></code></pre></figure>
+
+<p style="font-size:1.1rem;">설정한 테마의 모든 파일을 PC에 복제한 로컬 저장소에 복사한 후 아래의 명령어를 입력하여 Github 원격 저장소에 올린다.
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"> <span class="err">$</span> <span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span></code></pre></figure>
+
+<p style="font-size:1.1rem;">Push가 완료되면 5~10분 기다린 후 "https://설정한 이름.github.io"에 접속하여 확인한다.</p>
+</p>
 
   </div>
 </div>
 
 </div>
 
-<!--     </main>
+    </main>
     <footer class="page-footer teal">
-      <div class="container">
+      <!-- <div class="container">
         <div class="row">
           <div class="col s12">
             <img src="/assets/res/logo.png" alt="logo"/>
@@ -131,7 +194,7 @@
         <div class="container">
           &#xA9; 2019 개발 블로그. All rights reserved. Powered by <a href="https://github.com/ShawnTeoh/matjek">MatJek</a>.
         </div>
-      </div>
+      </div> -->
     </footer>
     <script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
@@ -144,4 +207,4 @@
     
     <script src="/assets/js/main.js"></script>
   </body>
-</html> -->
+</html>

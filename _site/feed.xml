@@ -1,2 +1,67 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-19T18:44:01+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">개발 블로그</title><subtitle>Material theme based on &lt;a href=&quot;http://materializecss.com&quot;&gt;Materialize.css&lt;/a&gt; for jekyll sites
-</subtitle><entry><title type="html">Jekyll를 이용한 Github 블로그 생성</title><link href="http://localhost:4000/2019/06/19/github-blog-post" rel="alternate" type="text/html" title="Jekyll를 이용한 Github 블로그 생성" /><published>2019-06-19T04:30:13+09:00</published><updated>2019-06-19T04:30:13+09:00</updated><id>http://localhost:4000/2019/06/19/github-blog-post</id><content type="html" xml:base="http://localhost:4000/2019/06/19/github-blog-post"></content><author><name></name></author><category term="test" /><summary type="html"></summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-22T19:35:28+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">개발 블로그</title><subtitle>Material theme based on &lt;a href=&quot;http://materializecss.com&quot;&gt;Materialize.css&lt;/a&gt; for jekyll sites
+</subtitle><entry><title type="html">Github 블로그 만들기</title><link href="http://localhost:4000/2019/06/19/github-blog-post" rel="alternate" type="text/html" title="Github 블로그 만들기" /><published>2019-06-19T04:30:13+09:00</published><updated>2019-06-19T04:30:13+09:00</updated><id>http://localhost:4000/2019/06/19/github-blog-post</id><content type="html" xml:base="http://localhost:4000/2019/06/19/github-blog-post">&lt;p&gt;&lt;span style=&quot;font-weight:bold; font-size:1.2rem;&quot;&gt;Jekyll&lt;/span&gt;과 &lt;span style=&quot;font-weight:bold; font-size:1.2rem;&quot;&gt;Github Pages&lt;/span&gt;를 이용한 Github 블로그 생성 방법&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;jekyll란&quot;&gt;&lt;strong&gt;Jekyll란?&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Jekyll은 심플하고 블로그 지향적인 정적 웹 사이트 생성기이다. Jekyll은 Markdown, html 등의 파일을 템플릿 디렉토리로부터 읽어서 웹 서버에 바로 게시하여 정적 웹사이트를 만들 수 있다. 또한, Jekyll은 GitHub Pages의 내부 엔진이며 자신의 프로젝트 페이지나 블로그, 웹 사이트를 무료로 GitHub에 호스팅 할 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://jekyllthemes.org&quot; style=&quot;color:#222222; text-decoration: underline;&quot;&gt;Jekyll 무료 테마 다운로드&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;github-pages란&quot;&gt;&lt;strong&gt;Github Pages란?&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Github Pages 는 Github 저장소의 내용을 웹페이지로 만들어 주는 서비스이며, Github 저장소의 내용을 직접 웹 페이지를 통해서 보여줄 수 있다. 즉, 무료로 웹 서버를 구축하여 자신의 블로그를 운영할 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;1개의 Github 계정으로 1개의 정적 웹 서버만 이용 가능&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;github-블로그-만들기&quot;&gt;&lt;strong&gt;Github 블로그 만들기&lt;/strong&gt;&lt;/h4&gt;
+&lt;h5 id=&quot;github-저장소-만들기&quot;&gt;Github 저장소 만들기&lt;/h5&gt;
+&lt;p style=&quot;font-size:1.1rem;&quot;&gt;Github에 블로그용 저장소 만들기 &lt;span style=&quot;color:blue; font-weight:bold;&quot;&gt;(&quot;원하는 이름.github.io&quot;와 같이 입력)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/1_git_repo_make.png&quot; style=&quot;width:100%;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;jekyll-설치-및-테스트&quot;&gt;Jekyll 설치 및 테스트&lt;/h5&gt;
+&lt;p&gt;&lt;span style=&quot;font-size: 1.3rem; font-weight: bold;&quot;&gt;Jekyll 설치&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 1.1rem;&quot;&gt;Jekyll은 하나의 Ruby 패키지이며 Jekyll을 설치하기 위해서 Ruby를 먼저 설치해야 한다. MacOS는 기본적으로 Ruby가 설치되어 있으며 아래의 명령어를 입력하여 Jekyll을 설치한다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bundler&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;span style=&quot;font-size: 1.3rem; font-weight: bold;&quot;&gt;Jekyll 테마 설정&lt;/span&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size: 1.1rem;&quot;&gt;&lt;a href=&quot;http://jekyllthemes.org&quot; style=&quot;color:#222222; text-decoration: underline;&quot;&gt;Jekyll 테마 사이트&lt;/a&gt;에서 원하는 테마를 다운로드 한 뒤 &quot;_config.yml&quot; 파일에서 아래 항목의 값을 수정한다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;title: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;제목&quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;baseurl: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;url: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Github 블로그 도메인&quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dowon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;github&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;io&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;repository: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;저장소 경로&quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dowon0809&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dowon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;github&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;io&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;user: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;사용자 이름&quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;user_email: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;사용자 이메일&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;span style=&quot;color:red; font-weight: bold;&quot;&gt;테마에 따라 설정해야 하는 값이 다를 수 있으며 위의 항목은 공통적인 부분을 추려낸 항목입니다.&lt;/span&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;span style=&quot;font-size: 1.3rem; font-weight: bold;&quot;&gt;Jekyll 로컬 테스트&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size:1.1rem;&quot;&gt;Jekyll 로컬 서버 구동을 위해 다운로드한 테마의 경로로 이동한 뒤 아래의 명령어를 순서대로 실행하여 bundle을 설치하고 Jekyll 로컬 서버를 구동한다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bundle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt;
+ &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bundle&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;serve&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;github-pages에-배포하기&quot;&gt;Github Pages에 배포하기&lt;/h5&gt;
+&lt;p&gt;&lt;span style=&quot;font-size:1.3rem; font-weight:bold;&quot;&gt;Github 블로그 저장소 가져오기&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;font-size:1.1rem;&quot;&gt;Github 원격 저장소를 저장하고 싶은 경로로 이동한 뒤 아래의 명령어를 통해 원격 저장소를 PC로 가져온다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;clone&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Github 저장소 웹 URL&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p style=&quot;font-size:1.1rem;&quot;&gt;설정한 테마의 모든 파일을 PC에 복제한 로컬 저장소에 복사한 후 아래의 명령어를 입력하여 Github 원격 저장소에 올린다.
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;push&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;origin&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;master&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p style=&quot;font-size:1.1rem;&quot;&gt;Push가 완료되면 5~10분 기다린 후 &quot;https://설정한 이름.github.io&quot;에 접속하여 확인한다.&lt;/p&gt;
+&lt;/p&gt;</content><author><name></name></author><category term="test" /><summary type="html">Jekyll과 Github Pages를 이용한 Github 블로그 생성 방법</summary></entry></feed>
