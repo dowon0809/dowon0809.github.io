@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+      Spring Framework란?
+      
+    </title>
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/res/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+    
+    <link rel="stylesheet" href="/assets/css/post.css">
+    
+    
+    
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+    <!-- <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml"> -->
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Spring Framework란?" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Spring Framework와 MVC 패턴의 이해" />
+<meta property="og:description" content="Spring Framework와 MVC 패턴의 이해" />
+<link rel="canonical" href="http://localhost:4000/2019/06/29/Spring-Framework" />
+<meta property="og:url" content="http://localhost:4000/2019/06/29/Spring-Framework" />
+<meta property="og:site_name" content="개발 블로그" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-06-29T01:00:00+09:00" />
+<script type="application/ld+json">
+{"description":"Spring Framework와 MVC 패턴의 이해","@type":"BlogPosting","url":"http://localhost:4000/2019/06/29/Spring-Framework","headline":"Spring Framework란?","dateModified":"2019-06-29T01:00:00+09:00","datePublished":"2019-06-29T01:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2019/06/29/Spring-Framework"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <header>
+      <nav class="top-nav teal">
+        <div class="nav-wrapper">
+          <div class="container">
+            <!-- <a class="page-title" href="/"> --><span class="page-title">Spring Framework란?</span><!-- </a> -->
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
+          <i class="material-icons">menu</i>
+        </a>
+      </div>
+      <ul id="slide-out" class="side-nav fixed">
+        <li>
+          <div class="userView" style="text-align:center;">
+            <div class="background"></div>
+           <!--  <a href="https://github.com/dowon0809" target="_blank"><img class="circle z-depth-2" src="/assets/res/user.png"></a> -->
+            <a href="/"><img class="circle z-depth-2" style="width:150px; height:110px; margin-left:auto; margin-right:auto;" src="/assets/res/user.png"></a>
+            <span class="name">이도원(Dowon Lee)</span>
+            <span class="email">dierwdod@gmail.com</span>
+            <span class="email">010-3669-7343</span>
+          </div>
+        </li>
+        <li><div class="divider"></div></li>
+        <li><a class="waves-effect" href="/"><i class="material-icons">person</i>Introduction</a></li>
+        <li><a class="waves-effect" href="/learnings"><i class="material-icons">sort</i>Learning</a></li>
+        <li><a class="waves-effect" href="/projects"><i class="material-icons">share</i>Projects</a></li>
+        <!-- <li><a class="waves-effect" href="/categories"><i class="material-icons">description</i>Categories</a></li>   -->  
+      </ul>
+    </header>
+    <main>
+
+<div class="container">
+  <div id="post-info">
+  <h3>Spring Framework란?</h3>
+  <ul class="collapsible hoverable" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header">
+        <span>
+          <i class="material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Date">date_range</i>
+          29/06/2019 01:00
+          <i id="indicate" class="right material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Show extra info">info</i>
+        </span>
+      </div>
+      <div class="collapsible-body">
+        <span>
+          <i class="material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Categories">sort</i>
+          
+          
+          
+          <a href="/categories#default" target="_blank"><div class="chip">default</div></a>
+          
+        </span>
+        <span>
+          <i class="material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Tags">label</i>
+          
+          
+          
+          <a href="/tags#test" target="_blank"><div class="chip">test</div></a>
+          
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="divider"></div>
+<div class="row">
+  <div class="col s12">
+    <p><span style="font-weight:bold; font-size:1.2rem;">Spring Framework</span>와 <span style="font-weight:bold; font-size:1.2rem;">MVC 패턴</span>의 이해</p>
+
+<p><br /></p>
+
+<h4 id="framework란"><strong>Framework란?</strong></h4>
+<p>“프레임워크란, 소프트웨어의 구체적인 부분에 해당하는 설계와 구현을 재사용이 가능하게끔 일련의 협업화된 형태로 클래스들을 제공하는 것”<br />- 랄프 존슨(Ralph Johnson) -
+<br /></p>
+<p style="font-size:1.4rem; font-weight:bold;">장점</p>
+<p><span style="font-weight:bold; font-style:oblique;">첫째,</span> 개발 생산이 좋아진다.
+<br />
+Framework는 컴포넌트, 통신 및 데이터 처리 등 개발이 필요한 다양한 기능을 미리 제공하며, 백지상태에서 개발하는 방식에 비해 개발 생산성이 좋아진다.
+<br /><br />
+<span style="font-weight:bold; font-style:oblique;">둘째,</span> 코드의 품질이 향상된다.
+<br />
+개발자가 반복적인 작업에서 실수하기 쉬운 부분들을 내부에서 처리하면서 버그 발생의 가능성을 최소화하여 코드의 품질이 향상된다.
+<br /><br />
+<span style="font-weight:bold; font-style:oblique;">셋째,</span> 유지 보수가 안정적이고 편리하다.
+비즈니스 환경이 빠르게 변화하면서 기업의 IT담당자들은 속도에 맞춰 지속적으로 시스템을 업데이트 해야만 한다. 이러한 상황에서 담당자가 바뀌는 상황이 생기면 유지보수의 문제와 마주하게 된다. Framework는 구조적으로 쳬게화된 개발 환경을 구축했다면 담당자가 변경되어도 그 패턴이 유사하기 때문에 위험을 최소화할 수 있으며 안정적인 시스템 운영 및 개발이 가능하다.
+<br /><br /></p>
+<p style="font-size:1.4rem; font-weight:bold;">단점</p>
+<p><span style="font-weight:bold; font-style:oblique;">첫째,</span> 학습 시간이 필요하다.
+<br />
+Framework의 기본적인 사용법, 제공하는 기능들을 이해하고 습득하려면 학습에 어느 정도의 시간을 투자해야 한다.
+<br /><br />
+<span style="font-weight:bold; font-style:oblique;">둘째,</span> 개발 자유도의 한계가 있다.
+<br />
+Framework를 기반으로 개발하다 보면, 구조와 패턴을 따라야하기 때문에 더 유연하게 개발하는 것에 제한적일 수 밖에 없다. Framework가 지원하지 않는 기능을 자체적으로 직접 구현할 필요가 있는데, 이 때 Framework로 인한 제약 사항이 발생할 수 있다. 
+<br /><br /><br /><br /></p>
+
+<h4 id="spring-framework란"><strong>Spring Framework란?</strong></h4>
+<p>Spring Framework는 Java Platform을 위한 오픈소스 애플리케이션 Framework로서 줄여서 Spring이라고 부른다. 동적인 웹 사이트를 개발하기 위한 여러가지 기능 및 서비스를 제공하고 있으며 공공기관의 웹 서비스 개발 시 사용을 권장하고 있는 전자정부 표준 프레임워크 기반 기술로서 쓰이고 있다.
+<br /></p>
+<p style="font-size:1.4rem;">특징</p>
+<ul>
+  <li><span style="font-size:1.1rem; font-weight: bold;">경량 컨테이너</span>로서 Java 객체 생성, 소멸과 같은 라이프 사이클을 관리하며 Spring으로 부터 필요한 객체를 얻어올 수 있다.</li>
+  <li><span style="font-size:1.1rem; font-weight: bold;">제어반전(IoC)</span>를 지원하여 컨트롤러의 제어권이 사용자가 아니라 Framework에 있어서 필요에 따라 Spring이 사용자의 코드를 호출한다.</li>
+  <li><span style="font-size:1.1rem; font-weight: bold;">의존성 주입(DI)</span>를 지원하여 각각의 계층이나 서비스들 간에 의존성이 존재할 경우 프레임워크가 서로 연결시켜 준다.</li>
+  <li><span style="font-size:1.1rem; font-weight: bold;">관점 지행 프로그래밍(AOP)</span>를 지원하여 트랜잭션이나 로깅, 보안과 같이 여러 모듈에서 공통적으로 사용하는 기능을 부니하여 관리한다.</li>
+  <li><span style="font-size:1.1rem; font-weight: bold;">영속성과 관련된 다양한 서비스</span>를 지원하여 iBatis나 Hibernate 등 이미 완성도가 높은 데이터베이스 처리 라이브러리와 연결할 수 있는 인터페이스를 제공한다.</li>
+  <li><span style="font-size:1.1rem; font-weight: bold;">확장성</span>이 높아 Spring Framework에 통합하기 위해 간단하게 기존 라이브러리를 감싸는 정도로 Spring에서 사용이 가능하기 때문에 수많은 라이브러리가 지원되고 있고 Spring에 사용되는 라이브러리를 별도로 분리하기도 용이하다.</li>
+</ul>
+
+<p><br /><br /><br /></p>
+
+<h4 id="mvc-패턴"><strong>MVC 패턴</strong></h4>
+<p>MVC 패턴이란 Model View Controller의 약자로서 데이터 구조를 나타내는 Model와 사용자에게 보여지는 화면인 View 그리고 Model과 View를 연결하는 Controller를 이용한 디자인 패턴이다. 
+<br /></p>
+<p style="font-size:1.3rem; font-weight:bold;">DispatcherServlet</p>
+<p>Spring은 다른 웹 MVC Framework와 같이 Front Controller를 사용하며 여러 가지 기능을 제공하는 Servlet 중심으로 설계되어 있다. 이러한 Front Controller 역할을 수행하는 것이 DispatcherServlet이다. DispatcherServlet은 단순히 Front Controller 기능만 하는 것이 아니라 스프링 IoC 컨테이너와 통합되어 스프링의 모든 기능을 사용할 수 있게 한다. DispatcherServlet은 Spring MVC의 핵심요소이며 웹 요청의 Life Cycle을 주관한다.</p>
+<ul>
+  <li><span style="font-size:1.1rem; font-weight: bold;">Front Controller</span>는 모든 Web Application에 대한 요청들을 받고 그 요청을 Controller로 분배해준다.</li>
+  <li><span style="font-size:1.1rem; font-weight: bold;">Servlet</span>이란 클라이언트의 요청을 처리하고 그 결과를 다시 클라이언트에게 전송하는 Servlet 클래스의 구현 규칙을 지킨 Java 프로그램이다.
+<br /></li>
+</ul>
+<p style="font-size:1.3rem; font-weight:bold;">Controller</p>
+<p>Controller란 클라이언트 요청이 진입하는 지점이며 요청에 따라 어떤 처리를 할지 결정해주며 클라이언트에게 View를 응답한다. Controller는 단지 요청을 결정만 해주며 실질적인 처리는 Service에서 담당한다. 규모가 커질수록 처리해야할 요청들이 많아지는데, 하나의 클래스에서 처리하는 것이 아닌 Controller라는 중간 제어자를 여러개 만들어 요청에 맞게 로직을 처리하도록 한다.
+<br /></p>
+<p style="font-size:1.3rem; font-weight:bold;">Service</p>
+<p>클라이언트 요청에 필요한 정보를 제공하기 위한 처리를 담당한다. 하나 이상의 DAO를 통해 클라이언트의 요청에 맞게 데이터를 접근 또는 갱신하여 비즈니스 로직을 수행하고, 이를 하나 또는 여러개의 트랜잭션으로 묶는다. 즉, Service는 트랜잭션의 단위이다.
+<br /></p>
+<p style="font-size:1.3rem; font-weight:bold;">DAO</p>
+<p>DAO는 Data Access Object의 약자로 말 그대로 DB의 데이터에 접근하는 객체이며, DB의 데이터를 읽거나 삽입 또는 삭제하는 데이터베이스 조작(DML)을 처리한다.
+<br /></p>
+<p style="font-size:1.3rem; font-weight:bold;">DTO</p>
+<p>DTO는 Data Transfer object의 약자로 데이터 교환을 위한 Javabeans을 말하며, 별다른 로직이 없는 순수한 데이터 객체이다. 즉, Getter/Setter 메서드를 가진 객체를 의미한다.
+<br /><br /><br /></p>
+
+<h5 id="spring-mvc-process">Spring MVC Process</h5>
+<ol>
+  <li>클라이언트가 서버에 요청을 하면 DispatcherServlet가 클라이언트의 요청을 가로챈다.</li>
+  <li>요청을 가로챈 DispatcherServlet은 HandlerMapping(URL 체크)을 통해 어떤 컨트롤러에게 요청을 위임할지 찾는다.</li>
+  <li>매핑된 컨트롤러에서 @RequestMapping Annotation을 통해 요청을 처리할 메서드를 실행한다.</li>
+  <li>Controller에서 클라이언트의 요청을 처리할 Service를 주입(DI)받아 비즈니스 로직을 Service에게 위임한다.</li>
+  <li>Service에서 요청에 필요한 작업 대부분을 코딩하며, 데이터베이스 접근이 필요할 경우 DAO를 주입(DI)받아 DB 처리를 DAO에게 위임한다.</li>
+  <li>DAO는 MyBatis Framework를 이용해서 DB에 접근하여 CRUD를 통한 정보를 VO(DTO)에 담아 Service로 반환한다.</li>
+  <li>Service는 모든 로직을 끝낸 결과를 Controller로 반환한다.</li>
+  <li>결과를 받은 컨트롤러는 Model에 보여주고자 하는 View(JSP) 파일 정보와 결과 정보를 담아 DispatcherServlet으로 보낸다.</li>
+  <li>DispatcherServlet은 ViewResolver에게 받은 View 정보를 넘기며, ViewResolver는 응답할 View(JSP)를 찾아서 DispatcherServlet에게 알려준다.</li>
+  <li>DispatcherServlet은 응답할 View(JSP)에게 랜더링을 지시하고 View는 응답 로직을 처리한다.</li>
+</ol>
+
+<p><br /><br /><br />
+<span style="font-size:1.2rem;">참고
+	<br />
+	<a href="http://tobetong.com/?p=6640">http://tobetong.com/?p=6640</a>
+	<br />
+	<a href="https://songsunbi.tistory.com/26">https://songsunbi.tistory.com/26</a>
+</span></p>
+
+  </div>
+</div>
+
+</div>
+
+    </main>
+    <footer class="page-footer teal">
+      <!-- <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <img src="/assets/res/logo.png" alt="logo"/>
+            <p class="grey-text text-lighten-4">Material theme based on <a href="http://materializecss.com">Materialize.css</a> for jekyll sites
+</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          &#xA9; 2019 개발 블로그. All rights reserved. Powered by <a href="https://github.com/ShawnTeoh/matjek">MatJek</a>.
+        </div>
+      </div> -->
+    </footer>
+    <script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    
+    
+    <script src="/assets/js/post.js"></script>
+    
+    
+    
+    
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
